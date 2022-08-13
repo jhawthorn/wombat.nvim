@@ -86,7 +86,6 @@ local theme = lush.extends({classic}).with(function()
     -- VertSplit    { fg = c.grey_5, bg = c.grey_5 }, -- the column separating vertically split windows
     -- Folded       { fg = c.grey_2, bg = c.grey_4 }, -- line used for closed folds
     -- FoldColumn   { Folded }, -- 'foldcolumn'
-    -- SignColumn   { }, -- column where |signs| are displayed
     -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     -- Substitute   { }, -- |:substitute| replacement text highlighting
     -- LineNr       { fg = c.grey_4, bg = c.black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -270,6 +269,11 @@ local theme = lush.extends({classic}).with(function()
     -- TSTitle              { },    -- Text that is part of a title.
     -- TSLiteral            { },    -- Literal text.
     -- TSURI                { },    -- Any URI like a link or email.
+
+    GitSignsAdd { fg = c.green, bg = classic.LineNr.bg },
+    GitSignsChange { fg = c.magenta, bg = classic.LineNr.bg },
+    GitSignsDelete { fg = c.red, bg = classic.LineNr.bg },
+    SignColumn   { bg = classic.LineNr.bg },
 
     -- gray
     CmpItemAbbrDeprecated   { fg = c.grey, gui = "strikethrough" },
