@@ -275,6 +275,10 @@ local theme = lush.extends({classic}).with(function()
     GitSignsDelete { fg = c.red, bg = classic.LineNr.bg },
     SignColumn   { bg = classic.LineNr.bg },
 
+    GitConflictIncoming { bg = hsl("#01381a") },
+    GitConflictCurrent { bg = hsl("#12025c") },
+    GitConflictAncestor { bg = hsl("#3f1854") },
+
     -- gray
     CmpItemAbbrDeprecated   { fg = c.grey, gui = "strikethrough" },
     -- blue
